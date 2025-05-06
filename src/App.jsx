@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { Outlet } from 'react-router-dom';
-import SubHeader from './components/header/SubHEader';
+import SubHeader from './components/header/SubHeader';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,8 +21,8 @@ function App() {
 //  </div>
 return <div className='min-h-screen bg-white flex flex-wrap content-between'>
     <div className='w-full block'>
-      <Header/>
-      <SubHeader/>
+      {/* <Header/>
+      <SubHeader/> */}
       <main>
         <Outlet/>
       </main>

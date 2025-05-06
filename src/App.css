@@ -70,6 +70,7 @@
 
 .product-card:hover {
   transform: scale(1.05);
+  background: #e3f2fd;
 }
 
 /* Design A */
@@ -81,5 +82,11 @@
 /* Design B */
 .design-b {
   background: #e3f2fd;
+  border-radius: 10px;
+}
+
+.design-c {
+  width:  700px;
+  /* background: #e3f2fd; */
   border-radius: 10px;
 }

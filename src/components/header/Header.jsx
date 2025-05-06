@@ -43,31 +43,31 @@ function Header() {
 
   return (
     <>
-      <header className='py-3 shadow bg-white'> 
+      <header className='py-1 shadow bg-white'>
         <Container>
-          <nav className='flex'>
+          <nav className='flex items-center'>
             <div className='mr-4'>
               <Link to='/'>
-                <h1 className='text-5xl font-bold text-green-600 hover:text-green-600'>3D</h1>
+                <h1 className='text-3xl font-bold text-green-600 hover:text-green-600'>3D</h1>
               </Link>
             </div>
-            <Input type='search' placeholder='Search...' className='mr-4'/>
-            <ul className='flex ml-auto'>
+            <Input type='search' placeholder='Search...' className='mr-4 h-8'/>
+            <ul className='flex ml-auto items-center'>
               {navItems.map((navItem)=> (
                 navItem.active ? (
-                <li key={navItem.name}>
-                  <button 
-                  className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full' 
-                  onClick={() => {
-                    const nav = navItem.slug;
-                    navigate(nav);
-                    }}>{navItem.name}</button>
-                </li>) : null
+                  <li key={navItem.name}>
+                    <button
+                      className='inline-block px-4 py-1 duration-200 hover:bg-blue-100 rounded-full text-sm'
+                      onClick={() => {
+                        const nav = navItem.slug;
+                        navigate(nav);
+                      }}>{navItem.name}</button>
+                  </li>) : null
               ))}
               {
-              <li>
-                <LogoutBtn/>
-              </li>
+                <li>
+                  <LogoutBtn/>
+                </li>
               }
             </ul>
           </nav>
